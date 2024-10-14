@@ -1,5 +1,5 @@
 import { Box, Drawer, Typography, useTheme } from '@mui/material'
-import { utils } from './utils';
+import { navigation } from './navigation';
 import { DensitySmall } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ export const Header = () => {
 
   const showItemMenu = () => {
     return <>
-      {utils.map((item, key) => {
+      {navigation.map((item, key) => {
         return (
           <Typography
             padding={theme.spacing(1)}

@@ -1,6 +1,6 @@
 import { Grid2 } from '@mui/material'
 import { Header, Layout } from '../../components'
-
+import { constants } from './constants'
 export const Home = () => {
 
   //
@@ -19,13 +19,11 @@ export const Home = () => {
         <Grid2
           height='100vh'
           width={{ xs: '100%', md: '50%' }}
-          bgcolor='red'
           display='flex'
           alignItems='center'
           justifyContent='center'
         >
-          teste
-
+          <img src={constants.images.main.src} alt={constants.images.main.alt} />
         </Grid2>
         <Grid2
           height='100vh'
