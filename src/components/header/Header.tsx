@@ -46,8 +46,6 @@ export const Header = () => {
             open={showDrawer}>
             <Box
               flex={1}
-              bgcolor={'#1f1c1c'}
-              color={'white'}
               textAlign='center'
               paddingY={theme.spacing(3)}
               width={theme.spacing(20)}
