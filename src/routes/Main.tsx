@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Home } from '../pages'; import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Home, Welcome } from '../pages';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 
@@ -21,6 +22,7 @@ export const Main = () => {
 
 
       <Routes>
+        <Route path='/Welcome' element={<Welcome />} />
         <Route path='/Home' element={<Home />} />
         <Route path='*' element={<Navigate to='/home' />} />
       </Routes>

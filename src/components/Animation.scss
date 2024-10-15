@@ -1,0 +1,10 @@
+.classLayout {
+  animation: anime 1.2s forwards;
+  opacity: 0;
+  @keyframes anime {
+    to {
+      transition: opacity 0.5s ease-out;
+      opacity: 1;
+    }
+  }
+}
