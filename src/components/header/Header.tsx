@@ -3,9 +3,9 @@ import { navigation } from './navigation';
 import { DensitySmall } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-
 export const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
+  const theme = useTheme();
 
   const showItemMenu = () => {
     return <>
@@ -18,8 +18,6 @@ export const Header = () => {
       })}
     </>
   }
-
-  const theme = useTheme();
   return (
     <Box
       paddingX={theme.spacing(5)}
@@ -43,7 +41,8 @@ export const Header = () => {
         <Box display={{ xs: 'flex', md: 'none' }}>
           <Drawer
             onClick={() => setShowDrawer(false)}
-            open={showDrawer}>
+            open={showDrawer}
+          >
             <Box
               flex={1}
               textAlign='center'
@@ -60,10 +59,7 @@ export const Header = () => {
             </Box>
           </Drawer>
         </Box>
-
-
       </Box>
-
     </Box>
   )
-}
+};

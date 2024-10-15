@@ -15,7 +15,6 @@ export const Home = () => {
     },
   }
 
-
   return (
     <Layout>
       <Header />
@@ -94,9 +93,10 @@ export const Home = () => {
             paddingBottom={theme.spacing(18)}
           >
             <Typography
-              fontWeight={600}
+              fontWeight={800}
               textAlign='end'
-              variant={'h3'}
+              variant={'h2'}
+              fontFamily='Afacad Flux'
               color={theme.palette.grey['800']}
             >
               {constants.texts.tittle}
