@@ -1,13 +1,20 @@
-import { Box, Grid2, useTheme } from '@mui/material'
-import { Header, Layout } from '../../components'
+import { Box, Button, Grid2, Typography, useTheme } from '@mui/material'
+import { Footer, Header, Layout } from '../../components'
 import { constants } from './constants'
 export const Home = () => {
 
   const theme = useTheme();
-  //
+  const stylesButton = {
+    paddingX: theme.spacing(5),
+    paddingY: theme.spacing(3),
+    backgroundColor: '#bdbdbd',
+    marginTop: theme.spacing(3),
+    color: theme.palette.grey[800],
+    '&:hover': {
+      backgroundColor: '#e2e2e2',
+    },
+  }
 
-  //const smDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
-  //console.log(smDown)
 
   return (
     <Layout>
@@ -25,9 +32,8 @@ export const Home = () => {
           justifyContent='center'
         >
           <img
-            width={theme.spacing(50)}
-            height={theme.spacing(50)}
-            loading="lazy"
+            width={theme.spacing(40)}
+            height={theme.spacing(40)}
             src={constants.images.main.src}
             alt={constants.images.main.alt}
             style={{ borderRadius: '50%' }}
@@ -35,8 +41,8 @@ export const Home = () => {
           <Box
             position='absolute'
             zIndex={1}
-            marginRight={theme.spacing(35)}
-            marginTop={theme.spacing(50)}
+            marginTop={theme.spacing(40)}
+            marginRight={theme.spacing(20)}
             bgcolor='#bdbdbd'
             borderRadius='50%'
             width={theme.spacing(20)}
@@ -48,13 +54,71 @@ export const Home = () => {
         <Grid2
           height='100vh'
           width={{ xs: '100%', md: '50%' }}
-          bgcolor='blue'
           display='flex'
           alignItems='center'
           justifyContent='center'
+          flexDirection='column'
         >
-          teste
+          <Box
+            height='50%'
+            width='100%'
+            display='flex'
+            justifyContent='center'
+            alignItems='flex-end'
+            flexDirection='column'
+            paddingRight={5}
+
+          >
+            <Typography
+              fontWeight={500}
+              letterSpacing={theme.spacing(1)}
+              variant='h5'
+
+            >{constants.texts.nameSite}
+            </Typography>
+
+            <Typography
+              paddingTop={theme.spacing(2)}
+              textAlign='end'>
+              {constants.texts.description1}            </Typography>
+          </Box>
+          <Box
+            paddingRight={5}
+
+
+            width='100%'
+            height='50%'
+            display='flex'
+            flexDirection='column'
+            alignItems='flex-end'
+            paddingBottom={theme.spacing(18)}
+          >
+            <Typography
+              fontWeight={600}
+              textAlign='end'
+              variant={'h3'}
+              color={theme.palette.grey['800']}
+            >
+              {constants.texts.tittle}
+            </Typography>
+
+            <Typography
+              marginTop={theme.spacing(5)}
+              textAlign='end'
+            >
+              {constants.texts.description2}
+            </Typography>
+            <Button
+              sx={stylesButton}
+            >
+              <Typography>{constants.texts.textButton}</Typography>
+            </Button>
+          </Box>
+
         </Grid2>
       </Grid2>
-    </Layout >)
+      <Footer />
+
+    </Layout >
+  )
 }

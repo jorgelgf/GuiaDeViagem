@@ -6,9 +6,8 @@ interface IChildrenProps {
 }
 
 export const Layout = ({ children }: IChildrenProps) => {
-
   return (
-    <Box style={{ width: '100vw' }}>
+    <Box >
       {children}
     </Box>)
 }

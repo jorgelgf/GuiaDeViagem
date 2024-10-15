@@ -8,6 +8,12 @@ export const constants = {
   },
   texts: {
     welcome: "Bem-vindo ao nosso site!",
-    description: "Explore nossas funcionalidades e aproveite!",
+    description1:
+      "Descubra destinos inesquecíveis e transforme sua viagem dos sonhos em realidade com o guia que te leva além do mapa!",
+    nameSite: "GUIA DE VIAGEM",
+    tittle: `É hora de planejar sua jornada`,
+    description2:
+      " Encontre lugares incríveis, dicas essenciais e viva experiências únicas com o guia de viagem perfeito para sua próxima aventura!",
+    textButton: "SAIBA MAIS",
   },
 };
