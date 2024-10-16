@@ -1,6 +1,6 @@
-import { Box, Button, Grid2, Typography, useTheme } from '@mui/material'
-import { Footer, Header, Layout } from '../../components'
-import { constants } from './constants'
+import { Box, Button, Grid2, Typography, useTheme } from '@mui/material';
+import { Footer, Layout } from '../../components';
+import { constants } from './constants';
 export const Home = () => {
 
   const theme = useTheme();
@@ -14,10 +14,8 @@ export const Home = () => {
       backgroundColor: '#e2e2e2',
     },
   }
-
   return (
     <Layout>
-      <Header />
       <Grid2
         container
         flexDirection={{ xs: 'column', md: 'row' }}

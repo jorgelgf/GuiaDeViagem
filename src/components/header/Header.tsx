@@ -1,19 +1,22 @@
 import { Box, Drawer, Typography, useTheme } from '@mui/material'
-import { navigation } from './navigation';
+import { constants } from './constants';
 import { DensitySmall } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 export const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const showItemMenu = () => {
     return <>
-      {navigation.map((item, key) => {
+      {constants.map((item, key) => {
         return (
           <Typography
             padding={theme.spacing(1)}
             style={{ cursor: 'pointer' }}
+            onClick={() => navigate(item.link)}
             key={key}>{item.name}</Typography>)
       })}
     </>
