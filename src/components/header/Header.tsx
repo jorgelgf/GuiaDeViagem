@@ -8,12 +8,14 @@ export const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const navigate = useNavigate();
   const theme = useTheme();
+  const logoName = 'Sua Logo';
 
   const showItemMenu = () => {
     return <>
       {constants.map((item, key) => {
         return (
           <Typography
+            variant='h6'
             padding={theme.spacing(1)}
             style={{ cursor: 'pointer' }}
             onClick={() => navigate(item.link)}
@@ -29,7 +31,7 @@ export const Header = () => {
       alignItems='center'
       justifyContent='space-between'
     >
-      <Typography variant='h5'>Logo</Typography>
+      <Typography variant='h5'>{logoName}</Typography>
       <Box
         display={{ xs: 'flex', md: 'none' }}
         style={{ cursor: 'pointer' }}
