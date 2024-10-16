@@ -15,7 +15,8 @@ export const Header = () => {
       {constants.map((item, key) => {
         return (
           <Typography
-            variant='h6'
+            variant='h5'
+            fontWeight={300}
             padding={theme.spacing(1)}
             style={{ cursor: 'pointer' }}
             onClick={() => navigate(item.link)}
