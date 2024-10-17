@@ -16,7 +16,7 @@ export const About = () => {
     justifyContent: 'space-evenly',
     height: 'auto%',
     width: 'auto%',
-  }
+  };
   const styleCards = {
     backgroundColor: '#DCE7EB',
     height: theme.spacing(30),
@@ -27,66 +27,52 @@ export const About = () => {
     flexDirection: 'column',
     marginTop: theme.spacing(2),
     padding: theme.spacing(2)
-  }
+  };
 
-  const textOnCards = {
-    travelTitle: 'PASSEIOS INCRÍVEIS ',
-    travelPhrase: 'Conforto e Segurança',
-    worldTittle: 'EXPLORE O MUNDO',
-    worldPhrase: 'Escolha o Melhor Lugar',
-    vacationsTitle: 'FÉRIAS E AVENTURAS',
-    vacationsPhrase: 'Diversão Garantida',
-    hotelsTitle: 'HOTÉIS LUXUOSOS',
-    hotelPhrase: 'Conforto e Qualidade'
-  }
+  const SXIconCards = {
+    fontSize: theme.spacing(constants.iconSize), transition: 'transform 0.3s ease', '&:hover': {
+      transform: 'scale(1.2)'
+    }
 
-  const showCards = () => {
-    return <>
-      <Box sx={styleBox}>
-        <Paper sx={styleCards}>
-          <CardTravelIcon sx={{ fontSize: theme.spacing(constants.iconSize) }} />
-          <Typography
-            marginTop={theme.spacing(2)}
-            fontWeight={300}
-            textAlign='center'
-            variant={sizeTitleCards}>{textOnCards.travelTitle}</Typography>
-          <Typography textAlign='center' fontWeight={300}>{textOnCards.travelPhrase}</Typography>
-        </Paper>
-      </Box>
-      <Box sx={styleBox}>
-        <Paper sx={styleCards}>
-          <TravelExploreIcon sx={{ fontSize: theme.spacing(constants.iconSize) }} />
-          <Typography
-            marginTop={theme.spacing(2)}
-            fontWeight={300}
-            textAlign='center'
-            variant={sizeTitleCards}>{textOnCards.worldTittle}</Typography>
-          <Typography textAlign='center' fontWeight={300}>{textOnCards.worldPhrase}</Typography>
-        </Paper>
-      </Box>
-      <Box sx={styleBox}>
-        <Paper sx={styleCards} >
-          <HowToRegIcon sx={{ fontSize: theme.spacing(constants.iconSize) }} />
-          <Typography
-            marginTop={theme.spacing(2)}
-            fontWeight={300}
-            textAlign='center'
-            variant={sizeTitleCards}>{textOnCards.vacationsTitle}</Typography>
-          <Typography textAlign='center' fontWeight={300}>{textOnCards.vacationsPhrase}</Typography>
-        </Paper>
-      </Box>
-      <Box sx={styleBox}>
-        <Paper sx={styleCards}>
-          <ApartmentIcon sx={{ fontSize: theme.spacing(constants.iconSize) }} />
-          <Typography
-            marginTop={theme.spacing(2)}
-            fontWeight={300}
-            textAlign='center'
-            variant={sizeTitleCards}>{textOnCards.hotelsTitle}</Typography>
-          <Typography textAlign='center' fontWeight={300}>{textOnCards.hotelPhrase}</Typography>
-        </Paper>
-      </Box></>
-  }
+  };
+  const travelOptionsCards = [
+    {
+      title: 'PASSEIOS INCRÍVEIS',
+      text: 'Conforto e Segurança',
+      component: <CardTravelIcon sx={SXIconCards} />
+    },
+    {
+      title: 'EXPLORE O MUNDO',
+      text: 'Escolha o Melhor Lugar',
+      component: <TravelExploreIcon sx={SXIconCards} />
+    }, {
+      title: 'FÉRIAS E AVENTURAS',
+      text: 'Diversão Garantida',
+      component: <HowToRegIcon sx={SXIconCards} />
+    }, {
+      title: 'HOTÉIS LUXUOSOS',
+      text: 'Conforto e Qualidade',
+      component: <ApartmentIcon sx={SXIconCards} />
+    },
+  ];
+  const cards = () => {
+    return travelOptionsCards.map((item, key) => {
+      return (
+        <Box
+          key={key}
+          sx={styleBox}>
+          <Paper sx={styleCards}>
+            {item.component}
+            <Typography
+              marginTop={theme.spacing(2)}
+              fontWeight={300}
+              textAlign='center'
+              variant={sizeTitleCards}>{item.title}</Typography>
+            <Typography textAlign='center' fontWeight={300}>{item.text}</Typography>
+          </Paper>
+        </Box>)
+    });
+  };
   return (
     <Layout>
       <Box
@@ -119,10 +105,9 @@ export const About = () => {
         gap={theme.spacing(5)}
         flexDirection={{ md: 'row', xl: 'column' }}
       >
-        {showCards()}
+        {cards()}
       </Box>
       <Footer />
     </Layout>
-  )
-
-}
+  );
+};
