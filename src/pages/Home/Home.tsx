@@ -22,15 +22,7 @@ export const Home = () => {
         flexDirection={{ xs: 'column', md: 'row' }}
         alignItems='center'
       >
-        <Grid2
-          height='100vh'
-          width={{ xs: '100%', md: '50%' }}
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-        >
-          <ImageCircle src={constants.images.main.src} alt={constants.images.main.alt} />
-        </Grid2>
+        <ImageCircle src={constants.images.main.src} alt={constants.images.main.alt} />
         <Grid2
           height='100vh'
           width={{ xs: '100%', md: '50%' }}

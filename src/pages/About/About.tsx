@@ -6,6 +6,8 @@ import CardTravelIcon from '@mui/icons-material/CardTravel';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { FirstSession } from './FirstSession';
 import { SecondSession } from './SecondSession';
+import { ThirdSession } from './ThirdSession';
+import { FourthSession } from './FourthSession';
 export const About = () => {
   const theme = useTheme();
 
@@ -110,6 +112,8 @@ export const About = () => {
           {cards()}
         </Box>
       </SecondSession>
+      <ThirdSession />
+      <FourthSession />
       <Footer />
     </Layout >
   );

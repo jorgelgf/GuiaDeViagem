@@ -1,8 +1,6 @@
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material';
 import { constants } from './constants';
 export const Footer = () => {
-
-
   const theme = useTheme();
   const spaceLetter = .5;
   const information = () => {
@@ -22,22 +20,18 @@ export const Footer = () => {
           <b>Horário de funcionamento:</b> {constants.openingHours}
         </Typography>
       </Box >
-    )
-  }
-
+    );
+  };
   return (
     <Box
       textAlign='center'
-      sx=
-      {{
+      sx={{
+        zIndex: 1,
         padding: '5%',
         background: '#333333',
         marginTop: theme.spacing(4)
       }}
-
-    >
-      {information()}
-
-    </Box>)
-
-}
+    >{information()}
+    </Box>
+  );
+};
