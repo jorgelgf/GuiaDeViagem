@@ -4,14 +4,22 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
+import { FirstSession } from './FirstSession';
+import { SecondSession } from './SecondSession';
 export const About = () => {
   const theme = useTheme();
+
+  //---- Início dos estilos e constantes  
   const sizeTitleCards = 'h6';
   const constants = {
     experienceTitle: "As Melhores Experiências",
     phrase: "Viaje leve, viva o presente e volte com histórias inesquecíveis.",
     iconSize: 6,
     sizeTitleCards: "h6",
+    bgImage: 'https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/d559cfec2b425e1a8ee76c6a/pexels-photo-9800099.jpeg',
+    title: 'Explore o Paraíso',
+    subtitle: 'Descubra praias de areia branca, águas cristalinas e aventuras inesquecíveis. Venha viver momentos mágicos em lugares incríveis!',
+    textButton: "SAIBA MAIS"
   };
   const styleBox = {
     display: 'flex',
@@ -57,6 +65,14 @@ export const About = () => {
       component: <ApartmentIcon sx={SXIconCards} />
     },
   ];
+
+  const whiteTextWithShadow = {
+    textShadow: '1px 1px 10px rgba(0, 0, 0, 0.5)',
+    color: 'white',
+  }
+
+  //---- Fim dos estilos e constantes  
+
   const cards = () => {
     return travelOptionsCards.map((item, key) => {
       return (
@@ -77,39 +93,24 @@ export const About = () => {
   };
   return (
     <Layout>
-      <Box
-        height='50vh'
-        display='flex'
-        alignItems='Center'
-        justifyContent='Center'
-        flexDirection='column'
+      <FirstSession whiteTextWithShadow={whiteTextWithShadow} constants={constants} />
+      <SecondSession
+        phrase={constants.phrase}
+        experienceTitle={constants.experienceTitle}
       >
-        <Typography
-          fontWeight='500'
-          variant='h2'
-          textAlign='center'
-        >{constants.experienceTitle}</Typography>
-
-        <Typography
-          variant='h6'
-          fontStyle='italic'
-          fontWeight='300'
-          textAlign='center'
-          marginTop={theme.spacing(5)}
-        >{constants.phrase}</Typography>
-      </Box>
-      <Box
-        display='flex'
-        justifyContent='space-evenly'
-        marginBottom={theme.spacing(12)}
-        alignItems='center'
-        flexWrap='wrap'
-        gap={theme.spacing(5)}
-        flexDirection={{ md: 'row', xl: 'column' }}
-      >
-        {cards()}
-      </Box>
+        <Box
+          display='flex'
+          justifyContent='space-evenly'
+          marginBottom={theme.spacing(12)}
+          alignItems='center'
+          flexWrap='wrap'
+          gap={theme.spacing(5)}
+          flexDirection={{ md: 'row', xl: 'column' }}
+        >
+          {cards()}
+        </Box>
+      </SecondSession>
       <Footer />
-    </Layout>
+    </Layout >
   );
 };

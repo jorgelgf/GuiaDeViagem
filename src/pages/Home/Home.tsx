@@ -1,11 +1,9 @@
 import { Box, Button, Grid2, Typography, useTheme } from '@mui/material';
-import { Footer, Layout } from '../../components';
+import { Footer, ImageCircle, Layout } from '../../components';
 import { constants } from './constants';
 import { useNavigate } from 'react-router';
 export const Home = () => {
-
   const navigate = useNavigate();
-
   const theme = useTheme();
   const stylesButton = {
     paddingX: theme.spacing(5),
@@ -16,7 +14,7 @@ export const Home = () => {
     '&:hover': {
       backgroundColor: '#e2e2e2',
     },
-  }
+  };
   return (
     <Layout>
       <Grid2
@@ -31,25 +29,7 @@ export const Home = () => {
           alignItems='center'
           justifyContent='center'
         >
-          <img
-            width={theme.spacing(40)}
-            height={theme.spacing(40)}
-            src={constants.images.main.src}
-            alt={constants.images.main.alt}
-            style={{ borderRadius: '50%' }}
-          />
-          <Box
-            position='absolute'
-            zIndex={1}
-            marginTop={theme.spacing(40)}
-            marginRight={theme.spacing(20)}
-            bgcolor='#bdbdbd'
-            borderRadius='50%'
-            width={theme.spacing(20)}
-            height={theme.spacing(20)}
-          >
-
-          </Box>
+          <ImageCircle src={constants.images.main.src} alt={constants.images.main.alt} />
         </Grid2>
         <Grid2
           height='100vh'
@@ -67,7 +47,6 @@ export const Home = () => {
             alignItems='flex-end'
             flexDirection='column'
             paddingRight={5}
-
           >
             <Typography
               fontWeight={500}
@@ -76,7 +55,6 @@ export const Home = () => {
 
             >{constants.texts.nameSite}
             </Typography>
-
             <Typography
               paddingTop={theme.spacing(2)}
               textAlign='end'>
@@ -84,8 +62,6 @@ export const Home = () => {
           </Box>
           <Box
             paddingRight={5}
-
-
             width='100%'
             height='50%'
             display='flex'
@@ -116,11 +92,9 @@ export const Home = () => {
               <Typography>{constants.texts.textButton}</Typography>
             </Button>
           </Box>
-
         </Grid2>
       </Grid2>
       <Footer />
-
     </Layout >
-  )
-}
+  );
+};
