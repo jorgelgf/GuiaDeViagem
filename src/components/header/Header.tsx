@@ -8,7 +8,7 @@ export const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const navigate = useNavigate();
   const theme = useTheme();
-  const logoName = 'Sua Logo';
+  const logoName = 'Guia de Viagens';
 
   const showItemMenu = () => {
     return <>
@@ -19,7 +19,11 @@ export const Header = () => {
             fontWeight={300}
             padding={theme.spacing(1)}
             style={{ cursor: 'pointer' }}
-            onClick={() => navigate(item.link)}
+            onClick={() => {
+              return (item.name === 'Contato') ?
+                (window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }))
+                : navigate(item.link)
+            }}
             key={key}>
             {item.name}</Typography>)
       })}
