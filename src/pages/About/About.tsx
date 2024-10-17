@@ -1,6 +1,5 @@
 import { Box, Paper, Typography, useTheme } from '@mui/material';
 import { Footer, Layout } from '../../components';
-import { constants } from './constants';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
@@ -8,8 +7,12 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 export const About = () => {
   const theme = useTheme();
   const sizeTitleCards = 'h6';
-
-
+  const constants = {
+    experienceTitle: "As Melhores Experiências",
+    phrase: "Viaje leve, viva o presente e volte com histórias inesquecíveis.",
+    iconSize: 6,
+    sizeTitleCards: "h6",
+  };
   const styleBox = {
     display: 'flex',
     alignItems: 'center',
@@ -33,7 +36,6 @@ export const About = () => {
     fontSize: theme.spacing(constants.iconSize), transition: 'transform 0.3s ease', '&:hover': {
       transform: 'scale(1.2)'
     }
-
   };
   const travelOptionsCards = [
     {
