@@ -51,10 +51,10 @@ export default tseslint.config({
 
 ## Padrões commit
 
-feat: Adiciona funcionalidade
-fix: Corrige bug
-docs: Atualiza README
-style: Ajusta formatação de código
-refactor: Refatora lógica
-test: Adiciona testes unitários para o componente X
-chore: Atualiza dependências no package.json
+- feat: Adiciona funcionalidade
+- fix: Corrige bug
+- docs: Atualiza README
+- style: Ajusta formatação de código
+- refactor: Refatora lógica
+- test: Adiciona testes unitários para o componente X
+- chore: Atualiza dependências no package.json
