@@ -1,7 +1,10 @@
 import { Box, Button, Grid2, Typography, useTheme } from '@mui/material';
 import { Footer, Layout } from '../../components';
 import { constants } from './constants';
+import { useNavigate } from 'react-router';
 export const Home = () => {
+
+  const navigate = useNavigate();
 
   const theme = useTheme();
   const stylesButton = {
@@ -108,6 +111,7 @@ export const Home = () => {
             </Typography>
             <Button
               sx={stylesButton}
+              onClick={() => navigate('/About')}
             >
               <Typography>{constants.texts.textButton}</Typography>
             </Button>

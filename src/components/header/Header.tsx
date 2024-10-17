@@ -20,7 +20,8 @@ export const Header = () => {
             padding={theme.spacing(1)}
             style={{ cursor: 'pointer' }}
             onClick={() => navigate(item.link)}
-            key={key}>{item.name}</Typography>)
+            key={key}>
+            {item.name}</Typography>)
       })}
     </>
   }

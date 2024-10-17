@@ -7,6 +7,9 @@ interface IChildrenProps {
 }
 
 export const Layout = ({ children }: IChildrenProps) => {
+
+  window.scrollTo(0, 0);
+
   return (
     <Box className='animation'>
       <Header />

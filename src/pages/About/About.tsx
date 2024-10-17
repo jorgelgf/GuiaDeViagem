@@ -7,8 +7,8 @@ import CardTravelIcon from '@mui/icons-material/CardTravel';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 export const About = () => {
   const theme = useTheme();
-
   const sizeTitleCards = 'h6';
+
 
   const styleBox = {
     display: 'flex',
