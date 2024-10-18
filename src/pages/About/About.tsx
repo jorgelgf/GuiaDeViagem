@@ -4,7 +4,7 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
-import { FifthSession, FirstSession, FourthSession, SecondSession, ThirdSession } from '.';
+import { FifthSession, FirstSession, FourthSession, SecondSession, SixthSession, ThirdSession } from '.';
 
 export const About = () => {
   const theme = useTheme();
@@ -86,6 +86,7 @@ export const About = () => {
       <ThirdSession />
       <FourthSession />
       <FifthSession />
+      <SixthSession />
       <Footer />
     </Layout >
   );

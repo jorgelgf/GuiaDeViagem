@@ -4,7 +4,8 @@ export const FifthSession = () => {
   const theme = useTheme();
 
   const constants = {
-    img: 'https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3073a5b603d2512ca693656b/photo-1602836948295-14b195efa63d.jpg',
+    imgLarge: 'https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3073a5b603d2512ca693656b/photo-1602836948295-14b195efa63d.jpg',
+    imgSmall: 'https://images01.nicepage.com/c461c07a441a5d220e8feb1a/b11b1d89f0695fa79366bd46/photo-1534067783941-51c9c23ecefd.jpg',
     alt: 'Casa estilo holandesa cor laranja com uma bela montanha ao fundo, tudo muito simples',
     textButton: 'RESERVE AGORA',
     title: 'Seu Passeio',
@@ -42,9 +43,9 @@ export const FifthSession = () => {
         width={1}
       >
         <img style={styleSmallImage}
-          src={constants.img} alt={constants.alt} />
+          src={constants.imgLarge} alt={constants.alt} />
         <img style={styleLargeImage}
-          src={constants.img} alt={constants.alt} />
+          src={constants.imgSmall} alt={constants.alt} />
 
       </Box>
       <Box
