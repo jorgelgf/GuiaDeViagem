@@ -1,6 +1,4 @@
 import { Box, Button, Typography, useTheme } from '@mui/material'
-import zIndex from '@mui/material/styles/zIndex';
-
 
 export const FifthSession = () => {
   const theme = useTheme();
@@ -28,8 +26,6 @@ export const FifthSession = () => {
     width: theme.spacing(20),
     height: theme.spacing(20)
   };
-
-
 
   return (
     <Box

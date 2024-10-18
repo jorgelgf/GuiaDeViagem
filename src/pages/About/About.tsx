@@ -11,13 +11,7 @@ export const About = () => {
 
   //---- Início dos estilos e constantes  
   const sizeTitleCards = 'h6';
-  const styleBox = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    height: 'auto%',
-    width: 'auto%',
-  };
+
   const styleCards = {
     backgroundColor: '#DCE7EB',
     height: theme.spacing(30),
@@ -27,7 +21,7 @@ export const About = () => {
     justifyContent: 'center',
     flexDirection: 'column',
     marginTop: theme.spacing(2),
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   };
   const SXIconCards = {
     fontSize: theme.spacing(6), transition: 'transform 0.3s ease', '&:hover': {
@@ -59,19 +53,17 @@ export const About = () => {
   const cards = () => {
     return travelOptionsCards.map((item, key) => {
       return (
-        <Box
-          key={key}
-          sx={styleBox}>
-          <Paper sx={styleCards}>
-            {item.component}
-            <Typography
-              marginTop={theme.spacing(2)}
-              fontWeight={300}
-              textAlign='center'
-              variant={sizeTitleCards}>{item.title}</Typography>
-            <Typography textAlign='center' fontWeight={300}>{item.text}</Typography>
-          </Paper>
-        </Box>)
+
+        <Paper key={key} sx={styleCards}>
+          {item.component}
+          <Typography
+            marginTop={theme.spacing(2)}
+            fontWeight={300}
+            textAlign='center'
+            variant={sizeTitleCards}>{item.title}</Typography>
+          <Typography textAlign='center' fontWeight={300}>{item.text}</Typography>
+        </Paper>
+      )
     });
   };
   return (
@@ -94,7 +86,6 @@ export const About = () => {
       <ThirdSession />
       <FourthSession />
       <FifthSession />
-
       <Footer />
     </Layout >
   );
