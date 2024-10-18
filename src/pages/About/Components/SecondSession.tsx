@@ -2,12 +2,15 @@ import { Box, Typography, useTheme } from '@mui/material'
 import { ReactNode } from 'react';
 
 interface ISecondSessionProps {
-  experienceTitle: string,
-  phrase: string,
+
   children: ReactNode
 }
 
-export const SecondSession = ({ experienceTitle, phrase, children }: ISecondSessionProps) => {
+export const SecondSession = ({ children }: ISecondSessionProps) => {
+  const constants = {
+    experienceTitle: "As Melhores Experiências",
+    phrase: "Viaje leve, viva o presente e volte com histórias inesquecíveis.",
+  }
   const theme = useTheme();
 
   return (
@@ -23,7 +26,7 @@ export const SecondSession = ({ experienceTitle, phrase, children }: ISecondSess
           fontWeight='500'
           variant='h2'
           textAlign='center'
-        >{experienceTitle}</Typography>
+        >{constants.experienceTitle}</Typography>
 
         <Typography
           variant='h6'
@@ -31,7 +34,7 @@ export const SecondSession = ({ experienceTitle, phrase, children }: ISecondSess
           fontWeight='300'
           textAlign='center'
           marginTop={theme.spacing(5)}
-        >{phrase}</Typography>
+        >{constants.phrase}</Typography>
       </Box>
       {children}
     </>

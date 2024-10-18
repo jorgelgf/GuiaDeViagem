@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useTheme } from '@mui/material'
-import { ImageCircle } from '../../components';
+import { ImageCircle } from '../../../components';
 
 export const ThirdSession = () => {
   const constants = {

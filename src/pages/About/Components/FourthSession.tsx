@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useTheme } from '@mui/material'
-import { ImageCircle } from '../../components'
+import { ImageCircle } from '../../../components'
 
 export const FourthSession = () => {
   const theme = useTheme();
@@ -66,7 +66,6 @@ export const FourthSession = () => {
             }}
           >{constants.textButton}</Button>
         </Box>
-
       </Box>
     </Box >
   )

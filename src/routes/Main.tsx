@@ -3,12 +3,9 @@ import { About, Contact, Home, Welcome } from '../pages';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+
 export const Main = () => {
-  const Theme = createTheme({
-    palette: {
-      mode: 'light',
-    },
-  });
+  const Theme = createTheme({});
   return (
     <ThemeProvider theme={Theme}>
       <CssBaseline />

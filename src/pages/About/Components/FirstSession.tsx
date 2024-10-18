@@ -1,22 +1,20 @@
 import { Box, Button, Typography, useTheme } from '@mui/material';
 
-interface IFirstSessionProps {
-  constants: {
-    experienceTitle: string,
-    phrase: string,
-    iconSize: number,
-    sizeTitleCards: string,
-    bgImage: string,
-    title: string,
-    subtitle: string,
-    textButton: string
+export const FirstSession = () => {
+  const constants = {
+    experienceTitle: "As Melhores Experiências",
+    phrase: "Viaje leve, viva o presente e volte com histórias inesquecíveis.",
+    sizeTitleCards: "h6",
+    bgImage: 'https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/d559cfec2b425e1a8ee76c6a/pexels-photo-9800099.jpeg',
+    title: 'Explore o Paraíso',
+    subtitle: 'Descubra praias de areia branca, águas cristalinas e aventuras inesquecíveis. Venha viver momentos mágicos em lugares incríveis!',
+    textButton: "SAIBA MAIS"
   };
-  whiteTextWithShadow: {
-    textShadow: string,
-    color: string,
-  };
-};
-export const FirstSession = ({ constants, whiteTextWithShadow }: IFirstSessionProps) => {
+
+  const whiteTextWithShadow = {
+    textShadow: '1px 1px 10px rgba(0, 0, 0, 0.5)',
+    color: 'white',
+  }
   const theme = useTheme();
   return (
     <Box

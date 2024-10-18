@@ -4,25 +4,13 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
-import { FirstSession } from './FirstSession';
-import { SecondSession } from './SecondSession';
-import { ThirdSession } from './ThirdSession';
-import { FourthSession } from './FourthSession';
+import { FifthSession, FirstSession, FourthSession, SecondSession, ThirdSession } from '.';
+
 export const About = () => {
   const theme = useTheme();
 
   //---- Início dos estilos e constantes  
   const sizeTitleCards = 'h6';
-  const constants = {
-    experienceTitle: "As Melhores Experiências",
-    phrase: "Viaje leve, viva o presente e volte com histórias inesquecíveis.",
-    iconSize: 6,
-    sizeTitleCards: "h6",
-    bgImage: 'https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/d559cfec2b425e1a8ee76c6a/pexels-photo-9800099.jpeg',
-    title: 'Explore o Paraíso',
-    subtitle: 'Descubra praias de areia branca, águas cristalinas e aventuras inesquecíveis. Venha viver momentos mágicos em lugares incríveis!',
-    textButton: "SAIBA MAIS"
-  };
   const styleBox = {
     display: 'flex',
     alignItems: 'center',
@@ -41,9 +29,8 @@ export const About = () => {
     marginTop: theme.spacing(2),
     padding: theme.spacing(2)
   };
-
   const SXIconCards = {
-    fontSize: theme.spacing(constants.iconSize), transition: 'transform 0.3s ease', '&:hover': {
+    fontSize: theme.spacing(6), transition: 'transform 0.3s ease', '&:hover': {
       transform: 'scale(1.2)'
     }
   };
@@ -67,12 +54,6 @@ export const About = () => {
       component: <ApartmentIcon sx={SXIconCards} />
     },
   ];
-
-  const whiteTextWithShadow = {
-    textShadow: '1px 1px 10px rgba(0, 0, 0, 0.5)',
-    color: 'white',
-  }
-
   //---- Fim dos estilos e constantes  
 
   const cards = () => {
@@ -95,10 +76,8 @@ export const About = () => {
   };
   return (
     <Layout>
-      <FirstSession whiteTextWithShadow={whiteTextWithShadow} constants={constants} />
+      <FirstSession />
       <SecondSession
-        phrase={constants.phrase}
-        experienceTitle={constants.experienceTitle}
       >
         <Box
           display='flex'
@@ -114,6 +93,8 @@ export const About = () => {
       </SecondSession>
       <ThirdSession />
       <FourthSession />
+      <FifthSession />
+
       <Footer />
     </Layout >
   );
