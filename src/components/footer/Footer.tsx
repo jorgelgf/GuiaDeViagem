@@ -29,7 +29,7 @@ export const Footer = () => {
         zIndex: 1,
         padding: '5%',
         background: '#333333',
-        marginTop: theme.spacing(4)
+        marginTop: theme.spacing(8)
       }}
     >{information()}
     </Box>

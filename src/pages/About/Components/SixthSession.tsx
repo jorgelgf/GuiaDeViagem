@@ -9,7 +9,7 @@ export const SixthSession = () => {
       display='flex'
       justifyContent='start'
       alignItems='center'
-      flexDirection='column'    >
+      flexDirection='column'>
       <Box
         marginTop={theme.spacing(5)}
         display='flex'
@@ -18,7 +18,6 @@ export const SixthSession = () => {
         textAlign='center'>
         <Typography variant='h2' fontWeight={600}>MEU TITULO</Typography>
         <Typography>Frases menores aqui</Typography>
-
       </Box>
       <Box
         border='solid black'
@@ -29,9 +28,7 @@ export const SixthSession = () => {
         height={1}
       >
         test
-
       </Box>
-
     </Box>
-  )
-}
+  );
+};
